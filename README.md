@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# [Título del trabajo/tarea/(módulo del proyecto)] 
 
 
@@ -269,3 +270,8 @@ _Referencia con url externo visible_
 > [Num ref] Iniciales del autor. Apellido del autor, Título del libro, edicion (si no es la primera). 
 > Lugar de publicación: Publicador, Año.
 > ```
+=======
+# bmei-tarea-2
+
+vinculo a otro [documento](/src/robot_comm/docs/document-template.md) en el repositorio (_ruta relativa_).
+>>>>>>> d812b91a367bd6a72d1c686e6e85415d944a7518
