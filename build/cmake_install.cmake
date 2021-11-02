@@ -131,6 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/ibarcenas/rosdev/bmei-tarea-2/build/gtest/cmake_install.cmake")
+  include("/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/cmake_install.cmake")
 
 endif()
 

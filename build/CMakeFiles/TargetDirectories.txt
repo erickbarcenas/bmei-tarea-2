@@ -35,3 +35,15 @@
 /home/ibarcenas/rosdev/bmei-tarea-2/build/gtest/googletest/CMakeFiles/test.dir
 /home/ibarcenas/rosdev/bmei-tarea-2/build/gtest/googletest/CMakeFiles/gtest_main.dir
 /home/ibarcenas/rosdev/bmei-tarea-2/build/gtest/googletest/CMakeFiles/gtest.dir
+/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/CMakeFiles/install/strip.dir
+/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/CMakeFiles/install/local.dir
+/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/CMakeFiles/edit_cache.dir
+/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/CMakeFiles/test.dir
+/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/CMakeFiles/std_msgs_generate_messages_py.dir
+/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/CMakeFiles/std_msgs_generate_messages_nodejs.dir
+/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/CMakeFiles/std_msgs_generate_messages_lisp.dir
+/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/CMakeFiles/std_msgs_generate_messages_eus.dir
+/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/CMakeFiles/install.dir
+/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/CMakeFiles/list_install_components.dir
+/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/CMakeFiles/rebuild_cache.dir
+/home/ibarcenas/rosdev/bmei-tarea-2/build/robot_comm/CMakeFiles/std_msgs_generate_messages_cpp.dir

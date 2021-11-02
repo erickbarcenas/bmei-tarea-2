@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = r'/home/ibarcenas/rosdev/bmei-tarea-1/devel;/home/ibarcenas/rosdev/catkin_ws/devel;/home/ibarcenas/rosdev/simulation_ws/devel;/home/ibarcenas/rosdev/robot_ws/devel;/opt/ros/noetic'.split(';')
+            CMAKE_PREFIX_PATH = r'/home/ibarcenas/rosdev/bmei-tarea-2/devel;/home/ibarcenas/rosdev/bmei-tarea-1/devel;/home/ibarcenas/rosdev/catkin_ws/devel;/home/ibarcenas/rosdev/simulation_ws/devel;/home/ibarcenas/rosdev/robot_ws/devel;/opt/ros/noetic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []
