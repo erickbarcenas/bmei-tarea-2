@@ -136,62 +136,240 @@ Proyecto de **ROS** con los directorios **adicionales** para almacenar **imágen
 **Nota:** La estructura mostrada representa -en su mayoría- a los directorios más usados dentro de un proyecto de **ROS**.
 
 ```text
- proyecto/
-    ├── images/
-    │   ├── imagen1.png
-    │   ├── imagen2.png
-    │   ├── imagen3.gif
-    │   └── imagen5.svg
-    ├── docs/
-    │   ├── archivo1.md
-    │   ├── archivo2.pdf
-    │   ├── archivo3.txt
-    │   └── archivo2.pdf
-    ├── src/
-    │   ├── include/
-    │   │   ├── lib1.h
-    │   │   └── libcpp.so
-    │   ├── config/
-    │   │   ├── config-file01.yaml
-    │   │   └── config-file02.yaml
-    │   ├── meshes/
-    │   │   ├── visual/
-    │   │   │   ├── mesh-file.stl
-    │   │   │   └── mesh-file.dae
-    │   │   └── collision/
-    │   │       ├── mesh-file.stl
-    │   │       └── mesh-file.dae
-    │   ├── launch/
-    │   │   ├── launch-file1.launch
-    │   │   ├── rviz-file1.rviz
-    │   │   ├── rviz-file2.rviz
-    │   │   └── launch-file3.launch
-    │   ├── msg/
-    │   │   ├── Message-file1.msg
-    │   │   └── Message-file2.msg
-    │   ├── srv/
-    │   │   ├── ServiceMsg-file1.srv
-    │   │   └── ServiceMsg-file2.srv
-    │   ├── action/
-    │   │   ├── ActionMsg-file1.action
-    │   │   └── ActionMsg-file2.action
-    │   ├── urdf/
-    │   │   ├── urdf-file.urdf
-    │   │   └── xacro-file.xacro
-    │   ├── scripts/
-    │   │   ├── pyscript-file.py
-    │   │   └── cpp-programm.cpp
-    │   ├── src/
-    │   │   ├── cpp-programm.cpp
-    │   │   └── pyprogramm-file.py
-    │   ├── Otros-archivos-del-proyecto.txt
-    │   ├── package.xml
-    │   └── CMakeLists.txt
-    ├── .gitignore
-    ├── CMakeLists.txt
-    ├── LICENSE.md
-    ├── Otros-archivos-generales.txt
-    └── Readme.md
+ /home/ibarcenas/rosdev/bmei-tarea-2
+├── build
+│   ├── atomic_configure
+│   │   ├── env.sh
+│   │   ├── local_setup.bash
+│   │   ├── local_setup.sh
+│   │   ├── local_setup.zsh
+│   │   ├── setup.bash
+│   │   ├── setup.sh
+│   │   ├── _setup_util.py
+│   │   └── setup.zsh
+│   ├── bin
+│   ├── catkin
+│   │   └── catkin_generated
+│   │       └── version
+│   │           └── package.cmake
+│   ├── catkin_generated
+│   │   ├── env_cached.sh
+│   │   ├── generate_cached_setup.py
+│   │   ├── installspace
+│   │   │   ├── env.sh
+│   │   │   ├── local_setup.bash
+│   │   │   ├── local_setup.sh
+│   │   │   ├── local_setup.zsh
+│   │   │   ├── setup.bash
+│   │   │   ├── setup.sh
+│   │   │   ├── _setup_util.py
+│   │   │   └── setup.zsh
+│   │   ├── order_packages.cmake
+│   │   ├── order_packages.py
+│   │   ├── setup_cached.sh
+│   │   └── stamps
+│   │       └── Project
+│   │           ├── interrogate_setup_dot_py.py.stamp
+│   │           ├── order_packages.cmake.em.stamp
+│   │           ├── package.xml.stamp
+│   │           └── _setup_util.py.stamp
+│   ├── CATKIN_IGNORE
+│   ├── catkin_make.cache
+│   ├── CMakeCache.txt
+│   ├── CMakeFiles
+│   │   ├── 3.16.3
+│   │   │   ├── CMakeCCompiler.cmake
+│   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   ├── CMakeSystem.cmake
+│   │   │   ├── CompilerIdC
+│   │   │   │   ├── a.out
+│   │   │   │   ├── CMakeCCompilerId.c
+│   │   │   │   └── tmp
+│   │   │   └── CompilerIdCXX
+│   │   │       ├── a.out
+│   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │       └── tmp
+│   │   ├── clean_test_results.dir
+│   │   │   ├── build.make
+│   │   │   ├── cmake_clean.cmake
+│   │   │   ├── DependInfo.cmake
+│   │   │   └── progress.make
+│   │   ├── cmake.check_cache
+│   │   ├── CMakeDirectoryInformation.cmake
+│   │   ├── CMakeError.log
+│   │   ├── CMakeOutput.log
+│   │   ├── CMakeRuleHashes.txt
+│   │   ├── CMakeTmp
+│   │   ├── download_extra_data.dir
+│   │   │   ├── build.make
+│   │   │   ├── cmake_clean.cmake
+│   │   │   ├── DependInfo.cmake
+│   │   │   └── progress.make
+│   │   ├── doxygen.dir
+│   │   │   ├── build.make
+│   │   │   ├── cmake_clean.cmake
+│   │   │   ├── DependInfo.cmake
+│   │   │   └── progress.make
+│   │   ├── Makefile2
+│   │   ├── Makefile.cmake
+│   │   ├── progress.marks
+│   │   ├── run_tests.dir
+│   │   │   ├── build.make
+│   │   │   ├── cmake_clean.cmake
+│   │   │   ├── DependInfo.cmake
+│   │   │   └── progress.make
+│   │   ├── TargetDirectories.txt
+│   │   └── tests.dir
+│   │       ├── build.make
+│   │       ├── cmake_clean.cmake
+│   │       ├── DependInfo.cmake
+│   │       └── progress.make
+│   ├── cmake_install.cmake
+│   ├── CTestConfiguration.ini
+│   ├── CTestCustom.cmake
+│   ├── CTestTestfile.cmake
+│   ├── gtest
+│   │   ├── CMakeFiles
+│   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   └── progress.marks
+│   │   ├── cmake_install.cmake
+│   │   ├── CTestTestfile.cmake
+│   │   ├── googlemock
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── gmock.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   ├── progress.make
+│   │   │   │   │   └── src
+│   │   │   │   ├── gmock_main.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   ├── progress.make
+│   │   │   │   │   └── src
+│   │   │   │   └── progress.marks
+│   │   │   ├── cmake_install.cmake
+│   │   │   ├── CTestTestfile.cmake
+│   │   │   └── Makefile
+│   │   ├── googletest
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── gtest.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   ├── progress.make
+│   │   │   │   │   └── src
+│   │   │   │   ├── gtest_main.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── depend.make
+│   │   │   │   │   ├── flags.make
+│   │   │   │   │   ├── link.txt
+│   │   │   │   │   ├── progress.make
+│   │   │   │   │   └── src
+│   │   │   │   └── progress.marks
+│   │   │   ├── cmake_install.cmake
+│   │   │   ├── CTestTestfile.cmake
+│   │   │   └── Makefile
+│   │   ├── lib
+│   │   └── Makefile
+│   ├── Makefile
+│   ├── robot_comm
+│   │   ├── catkin_generated
+│   │   │   ├── installspace
+│   │   │   │   ├── robot_commConfig.cmake
+│   │   │   │   ├── robot_commConfig-version.cmake
+│   │   │   │   └── robot_comm.pc
+│   │   │   ├── ordered_paths.cmake
+│   │   │   ├── package.cmake
+│   │   │   ├── pkg.develspace.context.pc.py
+│   │   │   ├── pkg.installspace.context.pc.py
+│   │   │   └── stamps
+│   │   │       └── robot_comm
+│   │   │           ├── package.xml.stamp
+│   │   │           └── pkg.pc.em.stamp
+│   │   ├── CMakeFiles
+│   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   ├── progress.marks
+│   │   │   ├── std_msgs_generate_messages_cpp.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── std_msgs_generate_messages_eus.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── std_msgs_generate_messages_lisp.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   ├── std_msgs_generate_messages_nodejs.dir
+│   │   │   │   ├── build.make
+│   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   ├── DependInfo.cmake
+│   │   │   │   └── progress.make
+│   │   │   └── std_msgs_generate_messages_py.dir
+│   │   │       ├── build.make
+│   │   │       ├── cmake_clean.cmake
+│   │   │       ├── DependInfo.cmake
+│   │   │       └── progress.make
+│   │   ├── cmake_install.cmake
+│   │   ├── CTestTestfile.cmake
+│   │   └── Makefile
+│   └── test_results
+├── devel
+│   ├── cmake.lock
+│   ├── env.sh
+│   ├── lib
+│   │   └── pkgconfig
+│   │       └── robot_comm.pc
+│   ├── local_setup.bash
+│   ├── local_setup.sh
+│   ├── local_setup.zsh
+│   ├── setup.bash
+│   ├── setup.sh
+│   ├── _setup_util.py
+│   ├── setup.zsh
+│   └── share
+│       └── robot_comm
+│           └── cmake
+│               ├── robot_commConfig.cmake
+│               └── robot_commConfig-version.cmake
+├── README.md
+└── src
+    ├── CMakeLists.txt -> /opt/ros/noetic/share/catkin/cmake/toplevel.cmake
+    └── robot_comm
+        ├── CMakeLists.txt
+        ├── docs
+        │   └── turtlebot3_obstacle_cube.world
+        ├── images
+        │   └── markdown-logo.png
+        ├── package.xml
+        └── src
+            ├── go_to_goal.py
+            ├── __init__.py
+            ├── instructions.txt
+            ├── logs.txt
+            └── pub_sub.py
+
 ```
 
 ***Bloques de código***
