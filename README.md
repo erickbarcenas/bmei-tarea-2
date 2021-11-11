@@ -441,12 +441,10 @@ Conclusiones o cierre al trabajo realizado.
 
 <a id="3">[3]</a>  H.-L. Pham, V. Perdereau, B. Adorno, en P. Fraisse, “Position and Orientation Control of Robot Manipulators Using Dual Quaternion Feedback”, 11 2010, bll 658–663. <https://www.researchgate.net/publication/224200087_Position_and_Orientation_Control_of_Robot_Manipulators_Using_Dual_Quaternion_Feedback>
 
-<https://moodle2018-19.ua.es/moodle/mod/book/view.php?id=8465&chapterid=181>
+Manual de ROS: Simulador 3D Gazebo. (n.d.). Moodle2018-19.Ua.Es. Retrieved November 11, 2021, from <https://moodle2018-19.ua.es/moodle/mod/book/view.php?id=8465&chapterid=181>
 
-<https://docs.aws.amazon.com/es_es/robomaker/latest/dg/simulation-tools-rviz.html>
+(N.d.). Amazon.Com. Retrieved November 11, 2021, from <https://docs.aws.amazon.com/es_es/robomaker/latest/dg/simulation-tools-rviz.html>
 
-<https://wiki-ros-org.translate.goog/robot_state_publisher?_x_tr_sch=http&_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=nui,sc>
+robot_state_publisher - ROS Wiki. (n.d.). Translate.Goog. Retrieved November 11, 2021, from <https://wiki-ros-org.translate.goog/robot_state_publisher?_x_tr_sch=http&_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=nui,sc>
 
-<https://wiki-ros-org.translate.goog/gazebo?_x_tr_sch=http&_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=nui,sc>
-
-
+gazebo - ROS Wiki. (n.d.). Translate.Goog. Retrieved November 11, 2021, from <https://wiki-ros-org.translate.goog/gazebo?_x_tr_sch=http&_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=nui,sc>
