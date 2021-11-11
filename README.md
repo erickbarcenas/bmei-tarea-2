@@ -25,8 +25,6 @@ Hacer que un robot móvil se mueva del punto A (0,0) al punto B (x,y) y en caso 
 
 Investigación. Investigar los diferentes sensores que componen al robot Robotis Turtlebot3 Waffle y su transmisión de datos en ROS (nodos, tópicos, servicios, simulaciones).
 
-### a) Sensores que componen al robot Robotis Turtlebot3 Waffle
-
 **/camera/depth/camera_info** : Calibración y metadatos de la cámara.                                                                                          
 **/camera/depth/image_raw** : Imagen sin procesar del dispositivo. Contiene profundidades uint16 en mm.
 
@@ -102,13 +100,6 @@ Estos servicios permiten al usuario recuperar información sobre el estado y las
 **~/model_states**: - Publicar estados completos del modelo en el marco mundialgazebo_msgs/ModelStates.
 
 
-### b) Nodos
-
-### c) Tópicos
-
-### c) Servicios
-
-### c) Simulaciones
 
 
 ## Desarrollo
@@ -378,7 +369,16 @@ Proyecto de **ROS** con los directorios **adicionales** para almacenar **imágen
 
 Conclusiones o cierre al trabajo realizado.
 
+El robot tiene un ángulo de movimiento el cual le permite ir de un punto A a un punto B, ahora bien, como el robot
+solo tiene dos ruedas se desvía y nuevamente debe de volverse a orientar. Si el robot tuviese cuatro ruedas el ir de un punto A a un punto B sería más rápido.
 
+El robot tiene un láser el cual detecta si hay un objeto cerca, sin el láser este proyecto no se ubiese cumplido cabalmente pues el robot hubiese
+chocado infinidas de veces con el objeto.
+
+
+
+
+escanea en 4 direcciones p
 
 ## Autor
 
