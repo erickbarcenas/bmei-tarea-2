@@ -25,6 +25,38 @@ Hacer que un robot móvil se mueva del punto A (0,0) al punto B (x,y) y en caso 
 
 Investigación. Investigar los diferentes sensores que componen al robot Robotis Turtlebot3 Waffle y su transmisión de datos en ROS (nodos, tópicos, servicios, simulaciones).
 
+### a) Sensores que componen al robot Robotis Turtlebot3 Waffle
+
+**/gazebo/link_states** : Pública estados de todos los enlaces en simulación.
+
+**/gazebo/model_states** : Pública estados de todos los modelos en simulación.
+
+**/gazebo/parameter_descriptions** : Publica la descripción de los parámetros de los modelos de la simulación.
+
+**/gazebo/parameter_updates** : Actualiza los nuevos parámetros de los modelos de la simulación.
+
+**/gazebo/performance_metrics**: Publican un mensaje llamado que permite verificar el desempeño de cada sensor en el mundo.
+
+**/gazebo/set_link_state**: Para probar la configuración de pose a través de temas.
+
+**/gazebo/set_model_state** :Este servicio permite al usuario configurar las posiciones de las articulaciones del modelo sin invocar dinámicas.
+
+**/imu** : Llama a la unidad de medición inercial.
+
+**/joint_states**: Es un estado de un conjunto de juntas controladas por torque.
+
+### b) Nodos
+**/rosout**: Es un nodo para suscribirse, registrar y volver a publicar los mensajes.
+
+**/recognizer/output**: Es un nodo de reconocimiento de voz.
+
+**/gazebo**:Simulador de entornos 3D que posibilita evaluar el comportamiento de un robot en un mundo virtual
+
+**/gazebo_gui**:Nodo que inicializa gazebo con roslaunch
+
+**/robot_state_publisher**:Toma los ángulos de articulación del robot como entrada y publica las poses en 3D de los enlaces del robot, utilizando un modelo de árbol cinemático del robot
+
+### c) Tópicos
 **/camera/depth/camera_info** : Calibración y metadatos de la cámara.                                                                                          
 **/camera/depth/image_raw** : Imagen sin procesar del dispositivo. Contiene profundidades uint16 en mm.
 
@@ -48,35 +80,24 @@ Investigación. Investigar los diferentes sensores que componen al robot Robotis
 
 **/cmd_vel**: Se usa para controlar el giro a una velocidad.
 
-**/gazebo/link_states** : Pública estados de todos los enlaces en simulación.
-
-**/gazebo/model_states** : Pública estados de todos los modelos en simulación.
-
-**/gazebo/parameter_descriptions** : Publica la descripción de los parámetros de los modelos de la simulación.
-
-**/gazebo/parameter_updates** : Actualiza los nuevos parámetros de los modelos de la simulación.
-
-**/gazebo/performance_metrics**: Publican un mensaje llamado que permite verificar el desempeño de cada sensor en el mundo.
-
-**/gazebo/set_link_state**: Para probar la configuración de pose a través de temas.
-
-**/gazebo/set_model_state** :Este servicio permite al usuario configurar las posiciones de las articulaciones del modelo sin invocar dinámicas.
-
-**/imu** : Llama a la unidad de medición inercial.
-
-**/joint_states**: Es un estado de un conjunto de juntas controladas por torque.
-
 **/odom**: Representa algo más que la "pose" del robot móvil ya que describe el estado "interno" del robot, es decir, la posición integrada utilizando codificadores de rueda y, potencialmente, con IMU fundida u otros sensores que miden el estado interno. A menudo, también se utiliza cuando se fusiona un sensor GNSS.
-
-**/recognizer/output**: Es un nodo de reconocimiento de voz.
-
-**/rosout**: Es un nodo para suscribirse, registrar y volver a publicar los mensajes.
 
 **/rosout_agg**: Es un feed agregado para suscribirse a los mensajes de registro de la consola. Este tema agregado se ofrece como una mejora del rendimiento.
 
 **/scan** : Usa un escaneo único desde un telémetro láser plano.
 
 **/tf** : Es un paquete que permite al usuario realizar un seguimiento de múltiples marcos de coordenadas a lo largo del tiempo.
+
+### d) Servicios
+
+**Servicios:Crea y destruye modelos en simulación.**
+Estos servicios permiten al usuario generar y destruir modelos en simulación.
+
+**~ / spawn_urdf_model ( gazebo_msgs / SpawnModel )**:Utilice este servicio para generar un modelo urdf .
+
+**~ / spawn_gazebo_model ( gazebo_msgs / SpawnModel )**:Utilice este servicio para generar un modelo escrito en la descripción del modelo XML de Gazebo.
+
+**~ / delete_model ( gazebo_msgs / DeleteModel )**: Este servicio permite al usuario eliminar un modelo de la simulación.
 
 **Servicios: captadores de propiedades y del estado**.
 Estos servicios permiten al usuario recuperar información sobre el estado y las propiedades de la simulación y los objetos en la simulación:
@@ -99,8 +120,46 @@ Estos servicios permiten al usuario recuperar información sobre el estado y las
 
 **~/model_states**: - Publicar estados completos del modelo en el marco mundialgazebo_msgs/ModelStates.
 
+**Servicios:Establecedores de estado y propiedades**
+Estos servicios permiten al usuario establecer información de estado y propiedad sobre la simulación y los objetos en la simulación.
 
+**~ / set_link_properties ( gazebo_msgs / SetLinkProperties )**:Este servicio establece las propiedades de un enlace en simulación.
 
+**~ / set_physics_properties ( gazebo_msgs / SetPhysicsProperties )**:Este servicio permite al usuario establecer las propiedades de un enlace en la simulación.
+
+**~ / set_model_state ( gazebo_msgs / SetModelState )**:Este servicio permite al usuario establecer las propiedades de un enlace en la simulación.
+
+**~ / set_model_configuration ( gazebo_msgs / SetModelConfiguration )**:Este servicio permite al usuario establecer posiciones conjuntas del modelo sin invocar dinámicas.
+
+**~ / set_joint_properties ( gazebo_msgs / SetJointProperties )**:Este servicio permite al usuario establecer las propiedades de un enlace en la simulación.
+
+**~ / set_link_state ( gazebo_msgs / SetLinkState )**:Este servicio permite al usuario establecer las propiedades de un enlace en la simulación.
+
+**Servicios:Control de simulación**
+Estos servicios permiten al usuario pausar y reanudar la física en la simulación.
+
+**~ / pause_physics ( std_srvs / Vacío )**:Pausar actualizaciones de física.
+
+**~ / unpause_physics ( std_srvs / Vacío )**:Reanudar las actualizaciones de física.
+
+**Servicios:Control de fuerza**
+Estos servicios permiten al usuario aplicar llaves y fuerzas a cuerpos y juntas en simulación.
+
+**~ / apply_body_wrench ( gazebo_msgs / ApplyBodyWrench )**:Aplique una llave inglesa a un cuerpo en simulación. Todas las llaves activas aplicadas al mismo cuerpo son acumulativas.
+
+**~ / apply_joint_effort ( gazebo_msgs / ApplyJointEffort )**:Aplicar esfuerzo a una articulación en simulación. Todos los esfuerzos activos aplicados a la misma articulación son acumulativos.
+
+**~ / clear_joint_forces ( gazebo_msgs / ClearJointForces )**:Esfuerzos aplicados claros a una articulación.
+
+**~ / clear_body_wrenches ( gazebo_msgs / ClearBodyWrenches )**: Llave transparente aplicada a un cuerpo.
+
+### e) Simulaciones
+
+**Gazebo**:Gazebo es un simulador de entornos 3D que posibilita evaluar el comportamiento de un robot en un mundo virtual. Permite, entre muchas otras opciones, diseñar robots de forma personalizada, crear mundos virtuales usando sencillas herramientas CAD e importar modelos ya creados.
+Además, es posible sincronizarlo con ROS de forma que los robots emulados publiquen la información de sus sensores en nodos, así como implementar una lógica y un control que dé ordenes al robot.Forma parte del bundle de ros "ros-kinetic-desktop-full", no obstante el robot que se usará como ejemplo no está integrado. El robot al que nos referimos es Turtlebot, un pequeño robot con una estructura montada sobre una base de Roomba y que integra sensores de odometría y una cámara RGB-D, entre otros.
+
+**rviz**:Es una herramienta de visualización en 3D para aplicaciones de ROS. Proporciona una vista del modelo de robot, captura la información de los sensores del robot y reproduce los datos capturados. Puede mostrar datos de cámara, láseres y dispositivos 3D y 2D, como imágenes y nubes de puntos.
+Para realizar las tareas que se indican a continuación, rviz debe estar abierto y conectado a un trabajo de simulación en ejecución. Puede abrir rviz desde la página Simulation jobs detail (Detalles de trabajos de simulación) de un trabajo de simulación en ejecución.
 
 ## Desarrollo
 
@@ -108,48 +167,25 @@ Estos servicios permiten al usuario recuperar información sobre el estado y las
 👆🏻 Dar clic en la imagen para ver el funcionamiento
 
 
-1. Descargar el [mundo de prueba](/src/robot_comm/docs/turtlebot3_obstacle_cube.world) y guardarlo en la carpeta correspondiente.
+1. Descargar el mundo de prueba
+ [documento](/src/robot_comm/docs/document-template.md)
  
+3.
+4.
+5.
+6.
+7.
+vinculo a otro  en el repositorio (_ruta relativa_).
 
-2. Abrir el archivo [go_to_goal](/src/robot_comm/src/go_to_goal.py) y en la línea 192 pasarle valores a la clase MoveRobot.
-``` python
-# Elegir una coordenada B que esté por detrás del cubo
+Imágenes
 
-# x: posición x
-# y: posición y
-# vel_fast: velocidad cuando el robot se mueve rápido
-move_robot = MoveRobot(x=-2.0, y=7.0, vel_fast=1.5)
+![Markdown Guide](/images/markdown-logo.png) Markdown Guide [Basic Syntax](https://www.markdownguide.org/basic-syntax/), [Extended Syntax](https://www.markdownguide.org/extended-syntax/)
 
-```
+Ejemplo de la estructura del directorios del repositorio: 
 
-3. Guardar el archivo.
+Proyecto de **ROS** con los directorios **adicionales** para almacenar **imágenes** y **documentos** referentes al **proyecto**.
 
-4. Asegurarse de que la carpeta de esté repositorio sea reconocida.
-``` shell
-source ~/rosdev/bmei-tarea-2/devel/setup.bash
-```
-
-5. Correr el siguiente comando:
-``` shell
-roslaunch turtlebot3_gazebo turtlebot3_any_world.launch
-```
-
-6. Correr el siguiente comando:
-``` shell
-roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
-```
-
-
-7. Correr el siguiente comando:
-``` shell
-rosrun robot_comm go_to_goal.py
-```
-
-8. Ver el video del funcionamiento del proyecto:
-https://youtu.be/SJAjYbJKV4k 
-
-La estructura del repositorio se muestra a continuación: 
-
+**Nota:** La estructura mostrada representa -en su mayoría- a los directorios más usados dentro de un proyecto de **ROS**.
 
 ```text
  /home/ibarcenas/rosdev/bmei-tarea-2
@@ -390,127 +426,7 @@ La estructura del repositorio se muestra a continuación:
 
 ## Conclusiones
 
-El robot tiene un ángulo de movimiento el cual le permite ir de un punto A a un punto B, ahora bien, como el robot
-solo tiene dos ruedas se desvía y nuevamente debe de volverse a orientar. Si el robot tuviese cuatro ruedas el ir de un punto A a un punto B sería más rápido.
-
-El robot tiene un láser el cual detecta si hay un objeto cerca, sin el láser este proyecto no se ubiese cumplido cabalmente pues el robot hubiese
-chocado infinidas de veces con el objeto.
-
-El conocer el robot es muy útil para saber qué sensor utilizar:
-
-1. Se listan los tópicos:
-``` shell
-rostopic list
-```
-2. Se elije uno de interés:
-
-``` shell
-...
-/odom
-/scan
-...
-```
-
-3. Se muestran su contenido:
-
-``` shell
-rostopic echo /scan
-
----
-header: 
-  seq: 1929
-  stamp: 
-    secs: 411
-    nsecs: 531000000
-  frame_id: "base_scan"
-angle_min: 0.0
-angle_max: 6.28318977355957
-angle_increment: 0.017501922324299812
-time_increment: 0.0
-scan_time: 0.0
-range_min: 0.11999999731779099
-range_max: 3.5
-ranges: [inf, inf, inf]
-intensities: [0.0, 0.0, 0.0]
-```
-
-4. Se muestran su contenido:
-
-``` shell
-rostopic echo /odom -n1
-
----
-header: 
-  seq: 109463
-  stamp: 
-    secs: 3796
-    nsecs: 665000000
-  frame_id: "odom"
-child_frame_id: "base_footprint"
-pose: 
-  pose: 
-    position: 
-      x: -2.0319656776671478
-      y: 6.963572901438072
-      z: -0.0010091347519655472
-    orientation: 
-      x: 0.0012717047342619566
-      y: -0.0009628094662041425
-      z: -0.7970080559829353
-      w: -0.6039665673390399
-  covariance: [1e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1000000000000.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1000000000000.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1000000000000.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.001]
-twist: 
-  twist: 
-    linear: 
-      x: 1.3699118330504703e-06
-      y: 3.4590369010973492e-06
-      z: 0.0
-    angular: 
-      x: 0.0
-      y: 0.0
-      z: 2.356958725366544e-05
-  covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
----
-```
-
-5. Se muestran su contenido:
-
-``` shell
-rosmsg show Odometry
-
----
-[nav_msgs/Odometry]:
-std_msgs/Header header
-  uint32 seq
-  time stamp
-  string frame_id
-string child_frame_id
-geometry_msgs/PoseWithCovariance pose
-  geometry_msgs/Pose pose
-    geometry_msgs/Point position
-      float64 x
-      float64 y
-      float64 z
-    geometry_msgs/Quaternion orientation
-      float64 x
-      float64 y
-      float64 z
-      float64 w
-  float64[36] covariance
-geometry_msgs/TwistWithCovariance twist
-  geometry_msgs/Twist twist
-    geometry_msgs/Vector3 linear
-      float64 x
-      float64 y
-      float64 z
-    geometry_msgs/Vector3 angular
-      float64 x
-      float64 y
-      float64 z
-  float64[36] covariance
-```
-
-
+Conclusiones o cierre al trabajo realizado.
 
 
 
@@ -523,7 +439,14 @@ geometry_msgs/TwistWithCovariance twist
 
 ## Referencias
 
-<a id="1">[1]	“ROS Developers LIVE Class #78: How to read laserscan data,” 17-Dec-2019. [En línea]. Disponible en: https://www.youtube.com/watch?v=Oal-aKJoC_U. [Recuperado: 11-Nov-2021].
+<a id="3">[3]</a>  H.-L. Pham, V. Perdereau, B. Adorno, en P. Fraisse, “Position and Orientation Control of Robot Manipulators Using Dual Quaternion Feedback”, 11 2010, bll 658–663. <https://www.researchgate.net/publication/224200087_Position_and_Orientation_Control_of_Robot_Manipulators_Using_Dual_Quaternion_Feedback>
 
+<https://moodle2018-19.ua.es/moodle/mod/book/view.php?id=8465&chapterid=181>
+
+<https://docs.aws.amazon.com/es_es/robomaker/latest/dg/simulation-tools-rviz.html>
+
+<https://wiki-ros-org.translate.goog/robot_state_publisher?_x_tr_sch=http&_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=nui,sc>
+
+<https://wiki-ros-org.translate.goog/gazebo?_x_tr_sch=http&_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=nui,sc>
 
 
