@@ -108,21 +108,43 @@ Estos servicios permiten al usuario recuperar información sobre el estado y las
 👆🏻 Dar clic en la imagen para ver el funcionamiento
 
 
-1. Descargar el mundo de prueba
- [documento](/src/robot_comm/docs/document-template.md)
+1. Descargar el mundo de prueba y guardarlo en la carpeta correspondiente.
+ [World](/src/robot_comm/docs/turtlebot3_obstacle_cube.world)
 
-2.
-3. 
-4. 
+2. Abrir el archivo [go_to_goal](/src/robot_comm/src/go_to_goal.py) y en la línea 192 pasarle valores a la clase MoveRobot
+``` python
+# Elegir una coordenada B que esté por detrás del cubo
+
+# x: posición x
+# y: posición y
+# vel_fast: velocidad cuando el robot se mueve rápido
+move_robot = MoveRobot(x=-2.0, y=7.0, vel_fast=1.5)
+
+```
+
+3. Guardar el archivo.
+
+4. Asegurarse de que la carpeta de esté repositorio sea reconocida.
+``` shell
+source ~/rosdev/bmei-tarea-2/devel/setup.bash
+```
+
+5. Correr el siguiente comando.
 ``` shell
 roslaunch turtlebot3_gazebo turtlebot3_any_world.launch
 ```
 
-5. roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
+6. Correr el siguiente comando
+``` shell
+roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
+```
 
-6.
-7.
-vinculo a otro  en el repositorio (_ruta relativa_).
+
+7. Correr el siguiente comando
+``` shell
+rosrun robot_comm go_to_goal.py
+```
+
 
 Imágenes
 
