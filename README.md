@@ -108,10 +108,10 @@ Estos servicios permiten al usuario recuperar información sobre el estado y las
 👆🏻 Dar clic en la imagen para ver el funcionamiento
 
 
-1. Descargar el mundo de prueba y guardarlo en la carpeta correspondiente.
- [World](/src/robot_comm/docs/turtlebot3_obstacle_cube.world)
+1. Descargar el [mundo de prueba](/src/robot_comm/docs/turtlebot3_obstacle_cube.world) y guardarlo en la carpeta correspondiente.
+ 
 
-2. Abrir el archivo [go_to_goal](/src/robot_comm/src/go_to_goal.py) y en la línea 192 pasarle valores a la clase MoveRobot
+2. Abrir el archivo [go_to_goal](/src/robot_comm/src/go_to_goal.py) y en la línea 192 pasarle valores a la clase MoveRobot.
 ``` python
 # Elegir una coordenada B que esté por detrás del cubo
 
@@ -129,18 +129,18 @@ move_robot = MoveRobot(x=-2.0, y=7.0, vel_fast=1.5)
 source ~/rosdev/bmei-tarea-2/devel/setup.bash
 ```
 
-5. Correr el siguiente comando.
+5. Correr el siguiente comando:
 ``` shell
 roslaunch turtlebot3_gazebo turtlebot3_any_world.launch
 ```
 
-6. Correr el siguiente comando
+6. Correr el siguiente comando:
 ``` shell
 roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
 ```
 
 
-7. Correr el siguiente comando
+7. Correr el siguiente comando:
 ``` shell
 rosrun robot_comm go_to_goal.py
 ```
@@ -403,10 +403,42 @@ solo tiene dos ruedas se desvía y nuevamente debe de volverse a orientar. Si el
 El robot tiene un láser el cual detecta si hay un objeto cerca, sin el láser este proyecto no se ubiese cumplido cabalmente pues el robot hubiese
 chocado infinidas de veces con el objeto.
 
+El conocer el robot es muy útil para saber qué sensor utilizar
 
+1. Se listan los tópicos:
+``` shell
+rostopic list
+```
+2. Se elije uno de interés:
 
+``` shell
+...
+/scan
+...
+```
 
-escanea en 4 direcciones p
+3. Se muestran su contenido:
+
+``` shell
+rostopic echo /scan
+
+---
+header: 
+  seq: 1929
+  stamp: 
+    secs: 411
+    nsecs: 531000000
+  frame_id: "base_scan"
+angle_min: 0.0
+angle_max: 6.28318977355957
+angle_increment: 0.017501922324299812
+time_increment: 0.0
+scan_time: 0.0
+range_min: 0.11999999731779099
+range_max: 3.5
+ranges: [inf, inf, inf]
+intensities: [0.0, 0.0, 0.0]
+```
 
 ## Autor
 
