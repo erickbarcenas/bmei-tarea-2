@@ -1,0 +1,5 @@
+roslaunch turtlebot3_gazebo turtlebot3_any_world.launch world_file:="$(find turtlebot3_gazebo)/worlds/turtlebot3_obstacle_cube.world"
+
+roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+
+roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
