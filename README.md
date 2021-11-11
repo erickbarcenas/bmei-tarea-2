@@ -24,14 +24,82 @@ Redacción del objetivo del trabajo o texto que describe a la tarea (_según sea
 
 ## Introducción
 
-Párrafo de introducción del trabajo o tarea (_si aplica_). 
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+**/camera/depth/camera_info** : Calibración y metadatos de la cámara.                                                                                          
+
+**/camera/depth/image_raw** : Imagen sin procesar del dispositivo. Contiene profundidades uint16 en mm.
+
+**/camera/depth/points** : Contiene una nube de puntos XYZ
+
+**/camera/parameter_descriptions**: Es una imagen de descripciones de parámetros.
+
+**/camera/parameter_updates**: Se usa para la actualizaciones de parámetros de una imagen.
+
+**/camera/rgb/camera_info**: Calibración y metadatos de la cámara.
+
+**/camera/rgb/image_raw**: Es una imagen sin procesar del dispositivo.
+
+**/camera/rgb/image_raw/compressed**: Es una imagen sin procesar del dispositivo de forma comprimida.
+
+**/camera/rgb/image_raw/compressed/parameter_descriptions**: Es una imagen sin procesar del dispositivo de forma comprimida de descripción de parámetros.
+
+**/camera/rgb/image_raw/compressed/parameter_updates**: Se usa para la actualizaciones de parámetros de una imagen de forma comprimida.
+
+**/clock**:Publicar tiempo de simulación, para ser utilizado con parámetro.
+
+**/cmd_vel**: Se usa para controlar el giro a una velocidad.
+
+**/gazebo/link_states** : Pública estados de todos los enlaces en simulación.
+
+**/gazebo/model_states** : Pública estados de todos los modelos en simulación.
+
+**/gazebo/parameter_descriptions** : Publica la descripción de los parámetros de los modelos de la simulación.
+
+**/gazebo/parameter_updates** : Actualiza los nuevos parámetros de los modelos de la simulación.
+
+**/gazebo/performance_metrics**: Publican un mensaje llamado que permite verificar el desempeño de cada sensor en el mundo.
+
+**/gazebo/set_link_state**: Para probar la configuración de pose a través de temas.
+
+**/gazebo/set_model_state** :Este servicio permite al usuario configurar las posiciones de las articulaciones del modelo sin invocar dinámicas.
+
+**/imu** : Llama a la unidad de medición inercial.
+
+**/joint_states**: Es un estado de un conjunto de juntas controladas por torque.
+
+**/odom**: Representa algo más que la "pose" del robot móvil ya que describe el estado "interno" del robot, es decir, la posición integrada utilizando codificadores de rueda y, potencialmente, con IMU fundida u otros sensores que miden el estado interno. A menudo, también se utiliza cuando se fusiona un sensor GNSS.
+
+**/recognizer/output**: Es un nodo de reconocimiento de voz.
+
+**/rosout**: Es un nodo para suscribirse, registrar y volver a publicar los mensajes.
+
+**/rosout_agg**: Es un feed agregado para suscribirse a los mensajes de registro de la consola. Este tema agregado se ofrece como una mejora del rendimiento.
+
+**/scan** : Usa un escaneo único desde un telémetro láser plano.
+
+**/tf** : Es un paquete que permite al usuario realizar un seguimiento de múltiples marcos de coordenadas a lo largo del tiempo.
+
+**Servicios: captadores de propiedades y del estado**.
+Estos servicios permiten al usuario recuperar información sobre el estado y las propiedades de la simulación y los objetos en la simulación:
+
+**~/get_model_properties**: - Este servicio devuelve las propiedades de un modelo en simulación.gazebo_msgs/GetModelProperties.
+
+**~/get_model_state**: - Este servicio devuelve los estados de un modelo en simulación.gazebo_msgs/GetModelState.
+
+**~/get_world_properties**: - Este servicio devuelve las propiedades del mundo de la simulación.gazebo_msgs/GetWorldProperties.
+
+**~/get_joint_properties**: - Este servicio devuelve las propiedades de una articulación en simulación.gazebo_msgs/GetJointProperties.
+
+**~/get_link_properties**: - Este servicio devuelve las propiedades de un enlace en simulación.gazebo_msgs/GetLinkProperties.
+
+**~/get_link_state**: - Este servicio devuelve los estados de un enlace en simulación.gazebo_msgs/GetLinkState.
+
+**~/get_physics_properties**: - Este servicio devuelve las propiedades del motor de física utilizado en la simulación.gazebo_msgs/GetPhysicsProperties.
+
+**~/link_states**: - Publicar estados de enlace completos en el marco mundialgazebo_msgs/LinkStates.
+
+**~/model_states**: - Publicar estados completos del modelo en el marco mundialgazebo_msgs/ModelStates.
 
 
 ## Desarrollo
