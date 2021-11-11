@@ -398,7 +398,7 @@ solo tiene dos ruedas se desvía y nuevamente debe de volverse a orientar. Si el
 El robot tiene un láser el cual detecta si hay un objeto cerca, sin el láser este proyecto no se ubiese cumplido cabalmente pues el robot hubiese
 chocado infinidas de veces con el objeto.
 
-El conocer el robot es muy útil para saber qué sensor utilizar
+El conocer el robot es muy útil para saber qué sensor utilizar:
 
 1. Se listan los tópicos:
 ``` shell
@@ -435,6 +435,29 @@ ranges: [inf, inf, inf]
 intensities: [0.0, 0.0, 0.0]
 ```
 
+4. Se muestran su contenido:
+
+``` shell
+rostopic echo /scan
+
+---
+header: 
+  seq: 1929
+  stamp: 
+    secs: 411
+    nsecs: 531000000
+  frame_id: "base_scan"
+angle_min: 0.0
+angle_max: 6.28318977355957
+angle_increment: 0.017501922324299812
+time_increment: 0.0
+scan_time: 0.0
+range_min: 0.11999999731779099
+range_max: 3.5
+ranges: [inf, inf, inf]
+intensities: [0.0, 0.0, 0.0]
+```
+
 ## Autor
 
 | Iniciales  | Description |
@@ -444,7 +467,7 @@ intensities: [0.0, 0.0, 0.0]
 
 ## Referencias
 
-<a id="1">[1]	“ROS Developers LIVE Class #78: How to read laserscan data,” 17-Dec-2019. [Online]. Available: https://www.youtube.com/watch?v=Oal-aKJoC_U. [Accessed: 11-Nov-2021].
+<a id="1">[1]	“ROS Developers LIVE Class #78: How to read laserscan data,” 17-Dec-2019. [En línea]. Disponible en: https://www.youtube.com/watch?v=Oal-aKJoC_U. [Recuperado: 11-Nov-2021].
 
 
 
