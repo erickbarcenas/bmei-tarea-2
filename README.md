@@ -390,8 +390,6 @@ La estructura del repositorio se muestra a continuación:
 
 ## Conclusiones
 
-Conclusiones o cierre al trabajo realizado.
-
 El robot tiene un ángulo de movimiento el cual le permite ir de un punto A a un punto B, ahora bien, como el robot
 solo tiene dos ruedas se desvía y nuevamente debe de volverse a orientar. Si el robot tuviese cuatro ruedas el ir de un punto A a un punto B sería más rápido.
 
