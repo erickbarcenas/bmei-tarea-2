@@ -408,6 +408,7 @@ rostopic list
 
 ``` shell
 ...
+/odom
 /scan
 ...
 ```
@@ -438,24 +439,41 @@ intensities: [0.0, 0.0, 0.0]
 4. Se muestran su contenido:
 
 ``` shell
-rostopic echo /scan
+rostopic echo /odom
 
 ---
+rostopic echo /odom -n1
 header: 
-  seq: 1929
+  seq: 109463
   stamp: 
-    secs: 411
-    nsecs: 531000000
-  frame_id: "base_scan"
-angle_min: 0.0
-angle_max: 6.28318977355957
-angle_increment: 0.017501922324299812
-time_increment: 0.0
-scan_time: 0.0
-range_min: 0.11999999731779099
-range_max: 3.5
-ranges: [inf, inf, inf]
-intensities: [0.0, 0.0, 0.0]
+    secs: 3796
+    nsecs: 665000000
+  frame_id: "odom"
+child_frame_id: "base_footprint"
+pose: 
+  pose: 
+    position: 
+      x: -2.0319656776671478
+      y: 6.963572901438072
+      z: -0.0010091347519655472
+    orientation: 
+      x: 0.0012717047342619566
+      y: -0.0009628094662041425
+      z: -0.7970080559829353
+      w: -0.6039665673390399
+  covariance: [1e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1e-05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1000000000000.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1000000000000.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1000000000000.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.001]
+twist: 
+  twist: 
+    linear: 
+      x: 1.3699118330504703e-06
+      y: 3.4590369010973492e-06
+      z: 0.0
+    angular: 
+      x: 0.0
+      y: 0.0
+      z: 2.356958725366544e-05
+  covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+---
 ```
 
 ## Autor
