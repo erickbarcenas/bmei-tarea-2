@@ -439,10 +439,9 @@ intensities: [0.0, 0.0, 0.0]
 4. Se muestran su contenido:
 
 ``` shell
-rostopic echo /odom
+rostopic echo /odom -n1
 
 ---
-rostopic echo /odom -n1
 header: 
   seq: 109463
   stamp: 
