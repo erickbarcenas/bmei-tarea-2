@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-﻿# [Título del trabajo/tarea/(módulo del proyecto)] 
+# [bmei-tarea-2] 
 
 
 | Código | Description |
 | ------:| ----------- |
-| ***Asignatura*** | Código del Trabajo o Número de Tarea | 
-| **TSR-2022-I** | Tarea *01 ... n* |
-| **Robotica-2022-I**  | Tarea *01 ... n* |
+| ***Asignatura*** | 2 | 
+| **TSR-2022-I** | Tarea *02* |
+| **Robotica-2022-I**  | Tarea *02* |
 | **IT102321-C002** | Sistema Ciber-Físico - Proyecto - Módulo |
 
 ## Contenido
@@ -20,14 +19,15 @@
 
 ## Objetivo
 
-Redacción del objetivo del trabajo o texto que describe a la tarea (_según sea el caso_).
+Hacer que un robot móvil se mueva del punto A (0,0) al punto B (x,y) y en caso de detectar un obstáculo esquivarlo.
 
 ## Introducción
 
+Investigación. Investigar los diferentes sensores que componen al robot Robotis Turtlebot3 Waffle y su transmisión de datos en ROS (nodos, tópicos, servicios, simulaciones).
 
+### a) Sensores que componen al robot Robotis Turtlebot3 Waffle
 
 **/camera/depth/camera_info** : Calibración y metadatos de la cámara.                                                                                          
-
 **/camera/depth/image_raw** : Imagen sin procesar del dispositivo. Contiene profundidades uint16 en mm.
 
 **/camera/depth/points** : Contiene una nube de puntos XYZ
@@ -102,34 +102,28 @@ Estos servicios permiten al usuario recuperar información sobre el estado y las
 **~/model_states**: - Publicar estados completos del modelo en el marco mundialgazebo_msgs/ModelStates.
 
 
+### b) Nodos
+
+### c) Tópicos
+
+### c) Servicios
+
+### c) Simulaciones
+
+
 ## Desarrollo
 
-Para consultar el formato a este documento, visitar [Markdown 101](https://github.com/decidim-archive/docs-template/blob/master/es/markdown-101.md).
-ver en [texto plano](https://raw.githubusercontent.com/decidim-archive/docs-template/master/es/markdown-101.md)
+[![En el siguiente video se documentó el funcionamiento del programa](https://media.discordapp.net/attachments/891388181361082421/908212341571747860/ros-tarea-2.png?width=768&height=431?width=506&height=499)](https://youtu.be/SJAjYbJKV4k)
 
-Ejemplo de párrafo
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Bloques de cita
-
-> "If it weren't for my lawyer, I'd still be in prison.
->  It went a lot faster with two people digging."
->
-> --- Joe Martin
-
-Bloque de cita con vínculo de referencia. 
-
-> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-> tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
->
-> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-> no sea takimata sanctus est Lorem ipsum dolor sit amet [[1]](#1). **<- referencia insertada** 
-
-vinculo a otro [documento](/src/robot_comm/docs/document-template.md) en el repositorio (_ruta relativa_).
+1. Descargar el mundo de prueba
+ [documento](/src/robot_comm/docs/document-template.md)
+ 
+3.
+4.
+5.
+6.
+7.
+vinculo a otro  en el repositorio (_ruta relativa_).
 
 Imágenes
 
