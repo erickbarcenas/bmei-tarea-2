@@ -113,7 +113,7 @@ Estos servicios permiten al usuario recuperar información sobre el estado y las
 
 ## Desarrollo
 
-[![En el siguiente video se documentó el funcionamiento del programa](https://media.discordapp.net/attachments/891388181361082421/908212341571747860/ros-tarea-2.png?width=768&height=431?width=506&height=499)](https://youtu.be/SJAjYbJKV4k)
+[![En el siguiente video se documentó el funcionamiento del programa](https://media.discordapp.net/attachments/891388181361082421/908212341571747860/ros-tarea-2.png)](https://youtu.be/SJAjYbJKV4k)
 
 1. Descargar el mundo de prueba
  [documento](/src/robot_comm/docs/document-template.md)
