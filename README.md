@@ -145,16 +145,11 @@ roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
 rosrun robot_comm go_to_goal.py
 ```
 
+8. Ver el video del funcionamiento del proyecto:
+https://youtu.be/SJAjYbJKV4k 
 
-Imágenes
+La estructura del repositorio se muestra a continuación: 
 
-![Markdown Guide](/images/markdown-logo.png) Markdown Guide [Basic Syntax](https://www.markdownguide.org/basic-syntax/), [Extended Syntax](https://www.markdownguide.org/extended-syntax/)
-
-Ejemplo de la estructura del directorios del repositorio: 
-
-Proyecto de **ROS** con los directorios **adicionales** para almacenar **imágenes** y **documentos** referentes al **proyecto**.
-
-**Nota:** La estructura mostrada representa -en su mayoría- a los directorios más usados dentro de un proyecto de **ROS**.
 
 ```text
  /home/ibarcenas/rosdev/bmei-tarea-2
@@ -449,6 +444,7 @@ intensities: [0.0, 0.0, 0.0]
 
 ## Referencias
 
-<a id="3">[3]</a>  H.-L. Pham, V. Perdereau, B. Adorno, en P. Fraisse, “Position and Orientation Control of Robot Manipulators Using Dual Quaternion Feedback”, 11 2010, bll 658–663. <https://www.researchgate.net/publication/224200087_Position_and_Orientation_Control_of_Robot_Manipulators_Using_Dual_Quaternion_Feedback>
+<a id="1">[1]	“ROS Developers LIVE Class #78: How to read laserscan data,” 17-Dec-2019. [Online]. Available: https://www.youtube.com/watch?v=Oal-aKJoC_U. [Accessed: 11-Nov-2021].
+
 
 
