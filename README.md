@@ -110,10 +110,16 @@ Estos servicios permiten al usuario recuperar información sobre el estado y las
 
 1. Descargar el mundo de prueba
  [documento](/src/robot_comm/docs/document-template.md)
- 
-3.
-4.
-5.
+
+2.
+3. 
+4. 
+``` shell
+roslaunch turtlebot3_gazebo turtlebot3_any_world.launch
+```
+
+5. roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
+
 6.
 7.
 vinculo a otro  en el repositorio (_ruta relativa_).
